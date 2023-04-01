@@ -1,0 +1,11 @@
+body{
+	height: 100%;
+	width: 100%;
+	background: grey;
+}
+.desktop-btn{
+	height: 50px;
+	width: 50px;
+	margin: 1vh;
+	float: left;
+}
