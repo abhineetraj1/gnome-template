@@ -1,22 +1,17 @@
-document.getElementsByTagName('title')[0].innerHTML = "GNOME template";
-st=["org.gnome.gedit.desktop","org.gnome.Nautilus.desktop","org.gnome.desktop.trash","org.gnome.Terminal.desktop"]
-sc=["Accessories-Text-Editor.png", "computer.png","recycle-bin.png","terminal.png"]
-elm= [];
-for (var i = 0; i < 4; i++) {
-	elm.push(default_ig("desktop-btn","png/"+sc[i],st[i]));
-	document.body.appendChild(elm[i]);
+ign=["Accessories-Text-Editor.png","computer.png","recycle-bin.png","terminal.png","network.png","shark.png"];
+var a = [document.createElement("div"), document.createElement("img"),document.createElement("nav"),[]];
+for (var i = ign.length - 1; i >= 0; i--) {
+	var t = document.createElement("img");
+	t.src="png/"+ign[i];
+	t.className="nv-ig";
+	a[3].push(t);
 }
-function default_ig(cls, src, site) {
-	var a = document.createElement("img")
-	a.src=src;
-	a.className=cls;
-	a.onclick=function() {
-		transfer_site(site);
-	}
-	return a;
-}
-function transfer_site(url) {
-	var a = document.createElement("a");
-	a.href=url;
-	a.click();
+a[1].src="png/bg.jpg";
+a[0].id="content";
+a[1].id="bg-img";
+a[2].id="nv";
+a[0].appendChild(a[1]);
+a[0].appendChild(a[2])
+for (var i = a[3].length - 1; i >= 0; i--) {
+	a[2].appendChild(a[3][i]);
 }
