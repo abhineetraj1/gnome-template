@@ -73,3 +73,10 @@ footer{
 	width: 100%;
 	font-size: 17px;
 }
+textarea{
+	width: 90%;
+	border-width: 0px;
+	font-size: 20px;
+	height: 100%;
+	border-radius: 0px 0px 10px 10px;
+}
