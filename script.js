@@ -1,4 +1,4 @@
-fntc=[window_txt_ed,null,null,null,null,window_cz]
+fntc=[window_txt_ed,window_file,window_trash,null,null,window_cz]
 ign=["Accessories-Text-Editor.png","computer.png","recycle-bin.png","terminal.png","network.png","shark.png"];
 var a = [document.createElement("footer"), document.createElement("center"),document.createElement("nav"),[]];
 for (var i = ign.length - 1; i >= 0; i--) {
@@ -43,6 +43,81 @@ function window_txt_ed() {
 		document.getElementsByClassName('window')[0].remove();
 	}
 	a[1].innerHTML="Text editor";
+	a[0].appendChild(a[1]);
+	a[2].innerHTML="X";
+	a[1].appendChild(a[2]);
+	a[0].appendChild(a[3]);
+	document.body.appendChild(a[0]);
+}
+function window_file() {
+	var a = [document.createElement("div"),document.createElement("div"),document.createElement("button"),document.createElement("div"),document.createElement("div"),document.createElement("div")];
+	a[0].className="window";
+	a[1].className="window-title";
+	a[2].className="window-title-btn";
+	a[3].className="window-content";
+	a[2].onclick=function () {
+		document.getElementsByClassName('window')[0].remove();
+	}
+	a[1].innerHTML="File manager";
+	a[4].className="folder-list";
+	a[5].className-"file-list"
+	fdr=["Desktop","Documents","Downloads","Picture","Videos","Music","Games","Apps","Drive"];
+	for (var i = fdr.length - 1; i >= 0; i--) {
+		var df=document.createElement("button");
+		df.className="fldr-btn";
+		df.innerHTML=fdr[i];
+		a[4].appendChild(df);
+	}
+	fle=["lorem.pdf","unknown.png","bhrt.py","song.mp3","video.mp4","movie.avi"];
+	for (var i = fle.length - 1; i >= 0; i--) {
+		var df=document.createElement("p");
+		df.className="fle-p";
+		df.innerHTML=fle[i];
+		a[5].appendChild(df);
+	}
+	a[3].appendChild(a[4]);
+	a[3].appendChild(a[5]);
+	a[0].appendChild(a[1]);
+	a[2].innerHTML="X";
+	a[1].appendChild(a[2]);
+	a[0].appendChild(a[3]);
+	document.body.appendChild(a[0]);
+}
+
+function window_trash() {
+	var a = [document.createElement("div"),document.createElement("div"),document.createElement("button"),document.createElement("div")];
+	a[0].className="window";
+	a[1].className="window-title";
+	a[2].className="window-title-btn";
+	a[3].className="window-content";
+	a[2].onclick=function () {
+		document.getElementsByClassName('window')[0].remove();
+	}
+	a[3].style.marginTop="3vh";
+	a[3].style.textAlign="center";
+	a[3].style.fontSize="30px";
+	a[3].innerHTML="--No file(s) available--";
+	a[1].innerHTML="Trash";
+	a[0].appendChild(a[1]);
+	a[2].innerHTML="X";
+	a[1].appendChild(a[2]);
+	a[0].appendChild(a[3]);
+	document.body.appendChild(a[0]);
+}
+function window_network() {
+	var a = [document.createElement("div"),document.createElement("div"),document.createElement("button"),document.createElement("div")];
+	a[0].className="window";
+	a[1].className="window-title";
+	a[2].className="window-title-btn";
+	a[3].className="window-content";
+	a[2].onclick=function () {
+		document.getElementsByClassName('window')[0].remove();
+	}
+	a[3].style.marginTop="3vh";
+	a[3].style.textAlign="center";
+	a[3].style.fontSize="30px";
+	a[3].innerHTML="You are connected to internet<br><br>Your Timezone : " + Intl.DateTimeFormat().resolvedOptions().timeZone;
+	a[1].innerHTML="Trash";
 	a[0].appendChild(a[1]);
 	a[2].innerHTML="X";
 	a[1].appendChild(a[2]);
