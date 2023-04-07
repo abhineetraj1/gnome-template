@@ -1,4 +1,4 @@
-fntc=[window_txt_ed,window_file,window_trash,null,null,window_cz]
+fntc=[window_txt_ed,window_file,window_trash,null,window_network,window_cz]
 ign=["Accessories-Text-Editor.png","computer.png","recycle-bin.png","terminal.png","network.png","shark.png"];
 var a = [document.createElement("footer"), document.createElement("center"),document.createElement("nav"),[]];
 for (var i = ign.length - 1; i >= 0; i--) {
