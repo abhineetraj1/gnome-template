@@ -80,3 +80,38 @@ textarea{
 	height: 100%;
 	border-radius: 0px 0px 10px 10px;
 }
+.folder-list{
+	width: 30%;
+	float: left;
+	height: 100%;
+	overflow: scroll;
+}
+.fldr-btn{
+	width: 100%;
+	background: white;
+	color: black;
+	border:solid;
+	font-size: 20px;
+	padding: 1vh;
+}
+.file-list{
+	overflow: scroll;
+	width: 70%;
+	float: right;
+	text-align: left;
+	font-size: 20px;
+}
+
+.fldr-btn:hover{
+	background: black;
+	color: white;
+	border-color: black;
+}
+.fle-p{
+	width: 100%;
+	padding-left: 5px;
+}
+.fle-p:hover{
+	background: black;
+	color: white;
+}
